@@ -56,7 +56,7 @@ export default function Hero() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5, delay: 0.7, ease: "easeOut" }}
         className="absolute z-10 pointer-events-none 
-          right-10 top-[23%] 
+          right-7 top-[18%] 
           sm:right-4 sm:top-[18%] 
           md:right-10 md:top-[19%] 
           lg:right-16 lg:top-[20%] 
