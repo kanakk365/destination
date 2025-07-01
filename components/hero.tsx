@@ -32,7 +32,7 @@ export default function Hero() {
           md:left-10 md:top-[19%] 
           lg:left-16 lg:top-[20%] 
           xl:left-24 xl:top-[22%] 
-          2xl:left-0 2xl:top-[24%] 
+          2xl:left-3 2xl:top-[24%] 
           -translate-y-1/2"
       >
         <div className="opacity-40 hover:opacity-60 transition-all duration-500
@@ -61,7 +61,7 @@ export default function Hero() {
           md:right-10 md:top-[19%] 
           lg:right-16 lg:top-[20%] 
           xl:right-24 xl:top-[22%] 
-          2xl:right-0 2xl:top-[24%] 
+          2xl:right-3 2xl:top-[24%] 
           -translate-y-1/2"
       >
         <div className="opacity-40 hover:opacity-60 transition-all duration-500
