@@ -27,8 +27,8 @@ export default function Hero() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
         className="absolute z-10 pointer-events-none 
-          left-2 top-[18%] 
-          sm:left-4 sm:top-[18%] 
+          left-5 top-[55%] 
+          sm:left-10 sm:top-[18%] 
           md:left-10 md:top-[19%] 
           lg:left-16 lg:top-[20%] 
           xl:left-24 xl:top-[22%] 
@@ -36,14 +36,14 @@ export default function Hero() {
           -translate-y-1/2"
       >
         <div className="opacity-40 hover:opacity-60 transition-all duration-500
-          w-24 h-24 
+          w-40 h-40
           sm:w-32 sm:h-32 
           md:w-44 md:h-44 
           lg:w-56 lg:h-56 
           xl:w-64 xl:h-64 
           2xl:w-[26rem] 2xl:h-[26rem]">
           <img
-            src="/vid/ball1.gif"
+            src="/vid/ball2.gif"
             alt="Soccer ball animation"
             className="w-full h-full object-contain filter brightness-110 rotate-90"
           />
@@ -56,7 +56,7 @@ export default function Hero() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5, delay: 0.7, ease: "easeOut" }}
         className="absolute z-10 pointer-events-none 
-          right-2 top-[18%] 
+          right-10 top-[23%] 
           sm:right-4 sm:top-[18%] 
           md:right-10 md:top-[19%] 
           lg:right-16 lg:top-[20%] 
@@ -65,14 +65,14 @@ export default function Hero() {
           -translate-y-1/2"
       >
         <div className="opacity-40 hover:opacity-60 transition-all duration-500
-          w-24 h-24 
+          w-40 h-40
           sm:w-32 sm:h-32 
           md:w-44 md:h-44 
           lg:w-56 lg:h-56 
           xl:w-64 xl:h-64 
           2xl:w-[26rem] 2xl:h-[26rem]">
           <img
-            src="/vid/ball1.gif"
+            src="/vid/ball2.gif"
             alt="Soccer ball animation"
             className="w-full h-full object-contain filter brightness-110 rotate-90"
           />
