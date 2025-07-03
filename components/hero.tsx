@@ -43,7 +43,7 @@ export default function Hero() {
           xl:w-64 xl:h-64 
           2xl:w-[26rem] 2xl:h-[26rem]">
           <img
-            src="/vid/ball2.gif"
+            src="/vid/vid2.gif"
             alt="Soccer ball animation"
             className="w-full h-full object-contain filter brightness-110 rotate-90"
           />
@@ -72,7 +72,7 @@ export default function Hero() {
           xl:w-64 xl:h-64 
           2xl:w-[26rem] 2xl:h-[26rem]">
           <img
-            src="/vid/ball2.gif"
+            src="/vid/vid1.gif"
             alt="Soccer ball animation"
             className="w-full h-full object-contain filter brightness-110 rotate-90"
           />
