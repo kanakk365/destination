@@ -45,7 +45,7 @@ export default function Hero() {
           <img
             src="/vid/vid2.gif"
             alt="Soccer ball animation"
-            className="w-full h-full object-contain filter brightness-110 rotate-90"
+            className="w-full h-[80%] object-contain filter brightness-110 rotate-90"
           />
         </div>
       </motion.div>
@@ -74,7 +74,7 @@ export default function Hero() {
           <img
             src="/vid/vid1.gif"
             alt="Soccer ball animation"
-            className="w-full h-full object-contain filter brightness-110 rotate-90"
+            className="w-full h-[80%] object-contain filter brightness-110 rotate-90"
           />
         </div>
       </motion.div>
