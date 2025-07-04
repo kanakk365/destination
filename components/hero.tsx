@@ -46,11 +46,15 @@ export default function Hero() {
             translate-x-[50%] sm:translate-x-[14rem]  // Adjusted translation for mobile
             translate-y-[7rem] // Same vertical translation
             mx-auto sm:mx-0">  
-        <img
-          src="/vid/vid2.gif"
-          alt="Soccer ball animation"
-          className="w-full h-[80%] object-contain filter brightness-110 rotate-90"
-        />
+       <video
+  src="/vid/first.mp4"
+  alt="Running animation"
+  className="w-full h-[80%] object-contain filter brightness-110 rotate-90"
+  autoPlay
+  loop
+  muted
+  playsInline
+></video>
       </div>
       </motion.div>
 
@@ -79,11 +83,15 @@ export default function Hero() {
             -translate-x-[50%] sm:-translate-x-[14rem]  // Adjusted translation for mobile
             translate-y-[7rem]  // Same vertical translation
             mx-auto sm:mx-0">  
-        <img
-          src="/vid/vid1.gif"
-          alt="Soccer ball animation"
-          className="w-full h-[80%] object-contain filter brightness-110 rotate-90"
-        />
+           <video
+  src="/vid/second.mp4"
+  alt="Running animation"
+  className="w-full h-[80%] object-contain filter brightness-110 rotate-90"
+  autoPlay
+  loop
+  muted
+  playsInline
+></video>
 
         </div>
       </motion.div>
