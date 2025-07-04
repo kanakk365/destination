@@ -43,8 +43,8 @@ export default function Hero() {
             lg:w-56 lg:h-56  // Large devices
             xl:w-64 xl:h-64  // Extra large devices
             2xl:w-80 2xl:h-80  // 2XL devices (same as 20rem)
-            translate-x-[50%] sm:translate-x-[18rem]  // Adjusted translation for mobile
-            translate-y-8  // Same vertical translation
+            translate-x-[50%] sm:translate-x-[14rem]  // Adjusted translation for mobile
+            translate-y-[7rem] // Same vertical translation
             mx-auto sm:mx-0">  
         <img
           src="/vid/vid2.gif"
@@ -76,8 +76,8 @@ export default function Hero() {
             lg:w-56 lg:h-56  // Large devices
             xl:w-64 xl:h-64  // Extra large devices
             2xl:w-80 2xl:h-80  // 2XL devices
-            -translate-x-[50%] sm:-translate-x-[18rem]  // Adjusted translation for mobile
-            translate-y-8  // Same vertical translation
+            -translate-x-[50%] sm:-translate-x-[14rem]  // Adjusted translation for mobile
+            translate-y-[7rem]  // Same vertical translation
             mx-auto sm:mx-0">  
         <img
           src="/vid/vid1.gif"
