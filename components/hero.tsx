@@ -36,18 +36,22 @@ export default function Hero() {
           -translate-y-1/2"
       >
         <div className="opacity-40 hover:opacity-60 transition-all duration-500
-          w-40 h-40
-          sm:w-32 sm:h-32 
-          md:w-44 md:h-44 
-          lg:w-56 lg:h-56 
-          xl:w-64 xl:h-64 
-          2xl:w-[20rem] 2xl:h-[20rem]">
-          <img
-            src="/vid/vid2.gif"
-            alt="Soccer ball animation"
-            className="w-full h-[80%] object-contain filter brightness-110 rotate-90"
-          />
-        </div>
+            w-24 h-24  // Base size for smallest mobile devices
+            xs:w-28 xs:h-28  // Extra small devices
+            sm:w-32 sm:h-32  // Small devices
+            md:w-44 md:h-44  // Medium devices
+            lg:w-56 lg:h-56  // Large devices
+            xl:w-64 xl:h-64  // Extra large devices
+            2xl:w-80 2xl:h-80  // 2XL devices (same as 20rem)
+            translate-x-[50%] sm:translate-x-[18rem]  // Adjusted translation for mobile
+            translate-y-8  // Same vertical translation
+            mx-auto sm:mx-0">  
+        <img
+          src="/vid/vid2.gif"
+          alt="Soccer ball animation"
+          className="w-full h-[80%] object-contain filter brightness-110 rotate-90"
+        />
+      </div>
       </motion.div>
 
       {/* Right soccer ball video, vertically centered with Destination text */}
@@ -65,17 +69,22 @@ export default function Hero() {
           -translate-y-1/2"
       >
         <div className="opacity-40 hover:opacity-60 transition-all duration-500
-          w-40 h-40
-          sm:w-32 sm:h-32 
-          md:w-44 md:h-44 
-          lg:w-56 lg:h-56 
-          xl:w-64 xl:h-64 
-          2xl:w-[20rem] 2xl:h-[20rem]">
-          <img
-            src="/vid/vid1.gif"
-            alt="Soccer ball animation"
-            className="w-full h-[80%] object-contain filter brightness-110 rotate-90"
-          />
+            w-24 h-24  // Base size for smallest mobile devices
+            xs:w-28 xs:h-28  // Extra small devices
+            sm:w-32 sm:h-32  // Small devices
+            md:w-44 md:h-44  // Medium devices
+            lg:w-56 lg:h-56  // Large devices
+            xl:w-64 xl:h-64  // Extra large devices
+            2xl:w-80 2xl:h-80  // 2XL devices
+            -translate-x-[50%] sm:-translate-x-[18rem]  // Adjusted translation for mobile
+            translate-y-8  // Same vertical translation
+            mx-auto sm:mx-0">  
+        <img
+          src="/vid/vid1.gif"
+          alt="Soccer ball animation"
+          className="w-full h-[80%] object-contain filter brightness-110 rotate-90"
+        />
+
         </div>
       </motion.div>
 
