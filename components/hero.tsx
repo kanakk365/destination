@@ -41,7 +41,7 @@ export default function Hero() {
           md:w-44 md:h-44 
           lg:w-56 lg:h-56 
           xl:w-64 xl:h-64 
-          2xl:w-[26rem] 2xl:h-[26rem]">
+          2xl:w-[20rem] 2xl:h-[20rem]">
           <img
             src="/vid/vid2.gif"
             alt="Soccer ball animation"
@@ -70,7 +70,7 @@ export default function Hero() {
           md:w-44 md:h-44 
           lg:w-56 lg:h-56 
           xl:w-64 xl:h-64 
-          2xl:w-[26rem] 2xl:h-[26rem]">
+          2xl:w-[20rem] 2xl:h-[20rem]">
           <img
             src="/vid/vid1.gif"
             alt="Soccer ball animation"
