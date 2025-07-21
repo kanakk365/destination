@@ -44,7 +44,7 @@ export default function CareerPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
-      <div className="pt-24 pb-20">
+      <div className="pt-32 pb-20">
         {applyingForJob ? (
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">

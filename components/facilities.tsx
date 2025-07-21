@@ -85,7 +85,7 @@ export default function Facilities() {
     const isLightTheme = theme === "light"
 
     return (
-      <div className={`${isLightTheme ? "bg-gray-50" : "bg-gray-100 dark:bg-zinc-800"} p-6 md:p-8 rounded-2xl`}>
+      <div className={`  ${isLightTheme ? "bg-gray-50" : "bg-gray-100 dark:bg-zinc-800"} p-6 md:p-8 rounded-2xl`}>
         <p className={`${isLightTheme ? "text-gray-700" : "text-gray-700 dark:text-gray-300"} text-base md:text-lg`}>
           {description}
         </p>
