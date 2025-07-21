@@ -13,12 +13,14 @@ import Newsletter from "@/components/newsletter"
 import Faq from "@/components/faq"
 import Footer from "@/components/footer"
 import Loading from "@/components/loading"
+import CompanyLogos from "@/components/CompanyLogos"
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[rgb(16,16,20)]">
       <Suspense fallback={<Loading />}>
         <Hero />
+        <CompanyLogos/>
         <About />
         <Facilities />
         <Location />
