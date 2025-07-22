@@ -13,7 +13,8 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Destination KP | Premier Youth Sports Complex",
   description: "The premier youth sports and events complex in Kings Park, Long Island, NY. Opening January 2026.",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
 }
 
 export default function RootLayout({
@@ -23,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={poppins.className}>
+      <body className={`${poppins.className} overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange={false}>
           {children}
         </ThemeProvider>

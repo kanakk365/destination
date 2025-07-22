@@ -84,14 +84,14 @@ const Navbar = () => {
 
   return (
     <header className="fixed z-50 top-0 backdrop-blur-3xl left-0 right-0 p-2 bg-[#0b0b0b]">
-      <div className="container mx-auto max-w-7xl min-h-[60px] sm:h-16 flex items-center justify-between gap-2 sm:gap-4 px-3 sm:px-4 md:px-6 lg:px-8 rounded-xl transition-all duration-300 ease-in-out bg-[#0b0b0b] ">
+      <div className="w-full max-w-7xl mx-auto min-h-[60px] sm:h-16 flex items-center justify-between gap-2 sm:gap-4 px-3 sm:px-4 md:px-6 lg:px-8 rounded-xl transition-all duration-300 ease-in-out bg-[#0b0b0b]">
         {/* Logo */}
-        <div className="flex-shrink-0 max-w-[160px] sm:max-w-[180px] md:max-w-none">
+        <div className="flex-shrink-0 max-w-[140px] sm:max-w-[160px] md:max-w-[180px] lg:max-w-none">
           <Link
             href="/"
-            className="font-bold text-lg sm:text-xl text-white  transition-colors duration-300 block"
+            className="font-bold text-lg sm:text-xl text-white transition-colors duration-300 block"
           >
-            <span className="text-xl sm:text-2xl font-bold">
+            <span className="text-lg sm:text-xl lg:text-2xl font-bold">
               Destination
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
                 KP
@@ -146,7 +146,7 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-[calc(100%+0.25rem)] sm:top-[calc(100%+0.5rem)] left-2 right-2 sm:left-4 sm:right-4 rounded-xl shadow-xl border border-gray-800/50 bg-[#131315] max-h-[calc(100vh-6rem)] sm:max-h-[calc(100vh-8rem)] overflow-y-auto mobile-menu">
-          <div className="container mx-auto py-3 sm:py-4 px-3 sm:px-4 flex flex-col gap-2">
+          <div className="w-full py-3 sm:py-4 px-3 sm:px-4 flex flex-col gap-2">
             {navigationItems.map((item) => (
               <Link
                 key={item.title}

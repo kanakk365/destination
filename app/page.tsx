@@ -17,7 +17,7 @@ import CompanyLogos from "@/components/CompanyLogos"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[rgb(16,16,20)]">
+    <main className="min-h-screen bg-[rgb(16,16,20)] overflow-x-hidden">
       <Suspense fallback={<Loading />}>
         <Hero />
         <CompanyLogos/>

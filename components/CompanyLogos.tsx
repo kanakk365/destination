@@ -45,7 +45,7 @@ const CompanyLogos = () => {
   ];
 
   return (
-    <section className="py-12 lg:py-16 bg-black ">
+    <section className="py-12 lg:py-16 bg-black overflow-hidden">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           {/* Category buttons for desktop */}
@@ -132,7 +132,7 @@ const CompanyLogos = () => {
 
         {/* Mobile scrolling marquee */}
         <div className="lg:hidden">
-          <div className="relative w-screen -translate-x-1/2 left-1/2 h-12 overflow-hidden">
+          <div className="relative w-full h-12 overflow-hidden">
             <div className="animate-marquee flex space-x-8 items-center h-full">
               {/* Combine all logos for mobile display */}
               {logoSets.flat().map((logo, index) => (
