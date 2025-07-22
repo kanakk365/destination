@@ -11,9 +11,9 @@ const Hero = () => {
       id="voicebot-hero"
       className="relative w-full bg-black text-white pt-20 lg:mt-20 lg:pt-12 overflow-hidden"
     >
-     <Navbar/>
+      <Navbar />
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-         <Spotlight/>
+        <Spotlight />
         <div className="w-full flex flex-col lg:flex-row items-center justify-between py-16 lg:py-24  ">
           {/* Left Content */}
           <div className="w-full lg:w-[60%] mb-12 lg:mb-0">
@@ -28,18 +28,23 @@ const Hero = () => {
           >
             Opening January 2026
           </HoverBorderGradient> */}
-                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 ">
-                    Future of Long Island{" "}
-                    
-                      <span className="relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600  ">Youth Sports</span>
-                    
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-8 space-y-4 text-center sm:text-left">
+                    <div className="sm:mb-4">
+                      Future of Long Island{" "}
+                    </div>
+                    <span className="  relative z-10 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600  ">
+                      Youth Sports
+                    </span>
                   </h1>
                 </div>
-                <div className="mb-8">
-                  <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                <div className="mb-8 sm:pr-20">
+                  <p className="text-lg sm:text-xl text-gray-300 leading-relaxed text-center sm:text-left">
                     Destination KP is a premier youth sports complex in Kings
-                    Park, Long Island,opening 
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600"> January 2026.</span>
+                    Park, Long Island,opening
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
+                      {" "}
+                      January 2026.
+                    </span>
                   </p>
                 </div>
                 <div className="w-full flex flex-col sm:flex-row gap-4">
