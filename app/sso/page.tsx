@@ -9,7 +9,7 @@ export default function SSORecieverPage() {
   const router = useRouter();
 
   // IMPORTANT: Replace with the actual domain of your first application
-  const FIRST_APP_ORIGIN = 'https://competitor-hub-frontend.vercel.app/'; // [3]
+  const FIRST_APP_ORIGIN = 'https://competitor-hub-frontend.vercel.app'; // [3]
 
   useEffect(() => {
     const handleMessage = async (event: MessageEvent) => {
@@ -43,9 +43,9 @@ export default function SSORecieverPage() {
           // setStatus('Token stored successfully. Redirecting to dashboard...');
           // Redirect the top-level window (the user's main browser tab)
           // This is crucial for the user to navigate to the protected content on app2.
-          if (window.top) {
-            window.top.location.href = '/dashboard'; // Redirect to a protected page on app2
-          }
+          // if (window.top) {
+          //   window.top.location.href = '/dashboard'; // Redirect to a protected page on app2
+          // }
         } catch (error: any) {
           console.error('Error storing token:', error);
           // setStatus(`Error: ${error.message}`);
