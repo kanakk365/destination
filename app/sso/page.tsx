@@ -68,7 +68,7 @@ export default function SSORecieverPage() {
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
       <h1>SSO Receiver</h1>
-      <p>{status}</p>
+      {/* <p>{status}</p> */}
       {/* This page is typically invisible to the user as it's in an iframe */}
     </div>
   );
