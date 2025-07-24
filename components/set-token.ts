@@ -7,7 +7,7 @@ export async function setssoToken(token: string) {
   const cookieStore = await cookies();
   cookieStore.set('accessToken', token, {
     httpOnly: true,
-    sameSite: 'strict',
+    // sameSite: 'strict',
     path: '/',
     maxAge: 60 * 60 * 24,
   });
