@@ -16,7 +16,7 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "frame-ancestors 'self' https://competitor-hub-frontend.vercel.app;", // adjust as needed
+            value: "frame-src 'self'  https://competitor-hub-frontend.vercel.app;", // adjust as needed
           },
         ],
       },
