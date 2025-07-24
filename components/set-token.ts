@@ -15,6 +15,7 @@ export async function setssoToken(token: string) {
       path: '/',
       maxAge: 60 * 60 * 24, // 1 day
     });
+    localStorage.setItem("accesstoken",token);
     return { success: true };
   } catch (error) {
     console.error('Error setting cookie:', error);
