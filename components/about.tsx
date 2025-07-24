@@ -92,8 +92,8 @@ export default function About() {
 
   const stats = [
     { value: 42, label: "ACRES" },
-    { value: 1, label: "OUTDOOR PLAYING FIELDS" },
-    { value: 2, label: "OUTDOOR PRACTICE FIELDS" },
+    { value: 7, label: "OUTDOOR PLAYING FIELDS" },
+    { value: 1, label: "OUTDOOR PRACTICE FIELDS" },
     { value: 64000, label: "Sqft INDOOR FACILITY" },
     { value: 5000, label: "Sqft FITNESS CENTER" },
   ]

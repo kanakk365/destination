@@ -52,7 +52,7 @@ const facilities = [
     id: 3,
     name: "Fitness Center",
     category: "Training",
-    image: "https://i.postimg.cc/fbxWCB4K/equipments-gym.jpg",
+    image: "https://i.postimg.cc/05pZKfSX/modern-gym-interior-with-sport-and-fitness-equipment-fitness-center-interior.jpg",
     description:
       "Our comprehensive fitness center is equipped with modern strength training, cardio, and recovery equipment. Designed for athletes of all levels, the center includes dedicated areas for team training, personal workouts, and specialized conditioning programs.",
     features: [
@@ -92,7 +92,7 @@ const facilities = [
     name: "Gourmet Food Court",
     category: "Dining",
     image:
-      "https://i.postimg.cc/7hcyw28h/summer-restaurant-mediterranean-coast-beautiful-sunset-tekirova-kemer-turkey.jpg",
+      "https://i.postimg.cc/bJfkq7my/Market-View-1-PRINT-0-0-1424280720.jpg",
     description:
       "Our gourmet food court offers diverse culinary options featuring healthy, locally-sourced ingredients. With multiple stations serving everything from nutritious meals to quick snacks, athletes and visitors can enjoy quality food that fuels performance and satisfies taste buds.",
     features: [
