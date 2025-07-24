@@ -21,7 +21,7 @@ export default function SSORecieverPage() {
       }
 
       // Validate the message data structure
-      if (event.data && event.data.type === 'JWT_TOKEN_TRANSFER' && event.data.token) {
+      if (event.data && event.data.token) {
         const receivedToken = event.data.token;
         // setStatus('Token received. Storing...');
 
