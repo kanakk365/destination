@@ -86,7 +86,7 @@ export default function SSORecieverPage() {
       if (event.origin === "https://competitor-hub-frontend.vercel.app") {
         const token = event.data.token;
         if (token) {
-          localStorage.setItem("sso_token", token);
+          // localStorage.setItem("sso_token", token);
           setssoToken(token)
           // document.cookie = `jwt=${token}; path=/; secure`;
         }
