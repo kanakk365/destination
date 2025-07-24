@@ -11,5 +11,5 @@ export async function setssoToken(token: string) {
     path: '/',
     maxAge: 60 * 60 * 24,
   });
-  return '/sso'
+  return 'ok'
 }
