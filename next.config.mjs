@@ -16,11 +16,11 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self' frame-src https://competitor-hub-frontend.vercel.app;", // adjust as needed
+            value: "default-src 'self'; frame-src https://competitor-hub-frontend.vercel.app", // adjust as needed
           },
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self' frame-ancestors https://competitor-hub-frontend.vercel.app;", // adjust as needed
+            value: "default-src 'self'; frame-ancestors https://competitor-hub-frontend.vercel.app", // adjust as needed
           },
         ],
       },
