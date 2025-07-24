@@ -91,8 +91,7 @@ const facilities = [
     id: 5,
     name: "Gourmet Food Court",
     category: "Dining",
-    image:
-      "https://i.postimg.cc/bJfkq7my/Market-View-1-PRINT-0-0-1424280720.jpg",
+    image: "https://i.postimg.cc/bJfkq7my/Market-View-1-PRINT-0-0-1424280720.jpg",
     description:
       "Our gourmet food court offers diverse culinary options featuring healthy, locally-sourced ingredients. With multiple stations serving everything from nutritious meals to quick snacks, athletes and visitors can enjoy quality food that fuels performance and satisfies taste buds.",
     features: [

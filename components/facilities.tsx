@@ -36,7 +36,7 @@ export default function Facilities() {
       description:
         "Our comprehensive fitness center is equipped with modern strength training, cardio, and recovery equipment. Designed for athletes of all levels, the center includes dedicated areas for team training, personal workouts, and specialized conditioning programs.",
       icon: <Mountain className="h-6 w-6 text-red-500" />,
-      src: "https://i.postimg.cc/fbxWCB4K/equipments-gym.jpg",
+      src: "https://i.postimg.cc/05pZKfSX/modern-gym-interior-with-sport-and-fitness-equipment-fitness-center-interior.jpg",
     },
     {
       category: "Events",
@@ -52,7 +52,7 @@ export default function Facilities() {
       description:
         "Our gourmet food court offers diverse culinary options featuring healthy, locally-sourced ingredients. With multiple stations serving everything from nutritious meals to quick snacks, athletes and visitors can enjoy quality food that fuels performance and satisfies taste buds.",
       icon: <UtensilsCrossed className="h-6 w-6 text-green-500" />,
-      src: "https://i.postimg.cc/7hcyw28h/summer-restaurant-mediterranean-coast-beautiful-sunset-tekirova-kemer-turkey.jpg",
+      src: "https://i.postimg.cc/bJfkq7my/Market-View-1-PRINT-0-0-1424280720.jpg",
     },
     {
       category: "Refreshments",

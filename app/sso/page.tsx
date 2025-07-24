@@ -87,6 +87,7 @@ export default function SSORecieverPage() {
         const token = event.data.token;
         if (token) {
           localStorage.setItem("sso_token", token);
+          
           // document.cookie = `jwt=${token}; path=/; secure`;
         }
       }
