@@ -79,7 +79,7 @@
 'use client';
 
 import { useEffect } from 'react';
-
+import { setssoToken } from '@/components/set-token';
 export default function SSORecieverPage() {
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {
@@ -87,7 +87,7 @@ export default function SSORecieverPage() {
         const token = event.data.token;
         if (token) {
           localStorage.setItem("sso_token", token);
-          
+          setssoToken(token)
           // document.cookie = `jwt=${token}; path=/; secure`;
         }
       }
