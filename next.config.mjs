@@ -16,12 +16,13 @@ const nextConfig = {
         headers: [
           {
             key: "Content-Security-Policy",
-            value: "default-src 'self'; frame-src https://competitor-hub-frontend.vercel.app", // adjust as needed
+            value: "default-src 'self'; frame-ancestors 'self' https://competitor-hub-frontend.vercel.app https://competitor-hub-frontend.vercel.app/; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';",
           },
-          {
-            key: "Content-Security-Policy",
-            value: "default-src 'self'; frame-ancestors https://competitor-hub-frontend.vercel.app", // adjust as needed
-          },
+          // Optional: Remove X-Frame-Options to rely on CSP frame-ancestors
+          // {
+          //   key: "X-Frame-Options",
+          //   value: "ALLOW-FROM https://competitor-hub-frontend.vercel.app"
+          // },
         ],
       },
     ];
