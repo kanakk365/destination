@@ -393,7 +393,7 @@ const categoryData = {
         type: "Beach",
         rating: 4.9,
         distance: "15 miles",
-        url: "https://newyorkstateparks.reserveamerica.com/camping/robert-moses-state-park/r/campgroundDetails.do?contractCode=NY&parkId=427",
+        url: "https://parks.ny.gov/parks/7/",
         image: "https://parks.ny.gov/photos/parks/94f071b4-74c0-482e-9276-2ae4b2789afe.jpg",
         isSponsored: true,
       },
