@@ -461,7 +461,7 @@ const categoryData = {
         rating: 4.6,
         distance: "0.8 miles",
         image: "https://i.postimg.cc/nLm0qr8g/hospital1.png",
-        url: "https://www.mountain.commonspirit.org/location/st-catherine-hospital-garden-city",
+        url: "https://www.catholichealthli.org/st-catherine-siena-hospital",
         isSponsored: true,
       },
       {
@@ -471,7 +471,7 @@ const categoryData = {
         rating: 4.8,
         distance: "1.2 miles",
         image: "https://i.postimg.cc/9Mj1b2CM/hospital2.jpg",
-        url: "https://www.citymd.com/",
+        url: " https://www.citymd.com/urgent-care-locations/ny/commack?utm_source=google&utm_medium=GMB_listings&utm_campaign=citymd_locations_GMB_listings",
         isSponsored: true,
       },
       {
@@ -481,7 +481,7 @@ const categoryData = {
         rating: 4.7,
         distance: "1.5 miles",
         image: "https://i.postimg.cc/GhpKqqwk/hospital3.png",
-        url: "https://www.cvshealth.com/",
+        url: "https://www.cvs.com/store-locator/commack-ny-pharmacies/341-commack-rd-commack-ny-11725/storeid=5061?WT.mc_id=LS_GOOGLE_FS_5061",
         isSponsored: true,
       },
     ],
