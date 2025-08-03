@@ -14,7 +14,7 @@ import Newsletter from "@/components/newsletter"
 import News from "@/components/news"
 import EventRegistrationForm from "@/components/event-registration-form"
 import EventShareModal from "@/components/event-share-modal"
-
+import { AdsSection } from "@/components/ads-section"
 export default function EventsPage() {
   const [registrationForm, setRegistrationForm] = useState({
     isOpen: false,
@@ -420,7 +420,23 @@ export default function EventsPage() {
           </Tabs>
         </div>
       </section>
-
+      <section className="py-16 px-4 md:px-6">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
+                Our Partners
+              </span>
+            </h2>
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              Supporting our community through quality products and services
+            </p>
+          </div>
+          <div className="max-w-md mx-auto">
+            <AdsSection />
+          </div>
+        </div>
+      </section>
       {/* Registration Form Modal */}
       <EventRegistrationForm
         isOpen={registrationForm.isOpen}

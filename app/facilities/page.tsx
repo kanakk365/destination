@@ -7,7 +7,7 @@ import Footer from "@/components/footer"
 import Contact from "@/components/contact"
 import Newsletter from "@/components/newsletter"
 import News from "@/components/news"
-
+import { AdsSection } from "@/components/ads-section"
 const facilities = [
   {
     id: 1,
@@ -323,7 +323,23 @@ export default function FacilitiesPage() {
           </motion.div>
         </div>
       </section>
-
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
+                Our Partners
+              </span>
+            </h2>
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              Quality brands that support our facilities and community
+            </p>
+          </div>
+          <div className="max-w-md mx-auto">
+            <AdsSection />
+          </div>
+        </div>
+      </section>
       {/* Contact Section */}
       <Contact />
 
