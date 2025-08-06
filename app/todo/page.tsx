@@ -9,7 +9,7 @@ import ActivityCategories from "@/components/activity-categories"
 import Contact from "@/components/contact"
 import Newsletter from "@/components/newsletter"
 import News from "@/components/news"
-import { promoSlides,sliderConfig } from "@/data/slider-data"
+import { todopromoSlides,sliderConfig } from "@/data/slider-data"
 import { Slider } from "@/components/sliders"
 export default function TodoPage() {
 
@@ -32,7 +32,7 @@ export default function TodoPage() {
               </p>
             </div>
              <Slider
-                slides={promoSlides}
+                slides={todopromoSlides}
                 {...sliderConfig}
               />
               <div className="mt-6"></div>
