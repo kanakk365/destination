@@ -50,7 +50,7 @@ const CompanyLogos = () => {
         <div className="text-center mb-12">
           {/* Category buttons for desktop */}
           <div className="hidden lg:block mb-8">
-            <p className="text-sm leading-6 text-neutral-400 mb-4">
+            <p className=" leading-6 text-neutral-400 mb-4 text-lg sm:text-xl">
               Destination KP partners with{" "}
               {categories.map((category, index) => (
                 <React.Fragment key={index}>
@@ -58,7 +58,7 @@ const CompanyLogos = () => {
                     className={`section-title inline-block relative cursor-pointer transition-colors duration-300 ${
                       activeCategory === index 
                         ? "text-white" 
-                        : "text-neutral-400 hover:text-neutral-200"
+                        : "text-neutral-400 hover:text-neutral-200 text-lg sm:text-xl"
                     }`}
                     type="button"
                     onClick={() => setActiveCategory(index)}
