@@ -1,5 +1,5 @@
 "use client"
-
+import React from 'react';
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Calendar, Clock, MapPin, Users, Ticket, UserPlus, Share2, ChevronLeft, ChevronRight } from "lucide-react"
@@ -15,6 +15,8 @@ import News from "@/components/news"
 import EventRegistrationForm from "@/components/event-registration-form"
 import EventShareModal from "@/components/event-share-modal"
 import { AdsSection } from "@/components/ads-section"
+import { promoSlides,sliderConfig } from "@/data/slider-data"
+import { Slider } from "@/components/sliders"
 export default function EventsPage() {
   const [registrationForm, setRegistrationForm] = useState({
     isOpen: false,
@@ -316,6 +318,7 @@ export default function EventsPage() {
                   {eventsData[month.id] && eventsData[month.id].length > 0 ? (
                     <div className="grid gap-8 md:gap-12">
                       {eventsData[month.id].map((event, index) => (
+                        <React.Fragment key={event.id}>
                         <motion.div
                           key={event.id}
                           initial={{ opacity: 0, y: 20 }}
@@ -405,6 +408,13 @@ export default function EventsPage() {
                             </div>
                           </Card>
                         </motion.div>
+                        {index % 2 === 0 && index !== eventsData[month.id].length - 1 && (
+                            <Slider
+                              slides={promoSlides}
+                              {...sliderConfig}
+                            />
+                          )}
+                        </React.Fragment>
                       ))}
                     </div>
                   ) : (
@@ -415,6 +425,7 @@ export default function EventsPage() {
                     </div>
                   )}
                 </motion.div>
+              
               </TabsContent>
             ))}
           </Tabs>
