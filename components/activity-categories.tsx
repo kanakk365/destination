@@ -4,6 +4,8 @@ import { useState } from "react"
 import { ChevronLeft, ChevronRight, Filter, Star, MapPin, ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ActivityFilter from "./activity-filter"
+import { SliderNobutton } from "./sliderNobutton"
+import { promoSlides,sliderConfig } from "@/data/slider-data"
 
 const categories = [
   {
@@ -722,7 +724,10 @@ export default function ActivityCategories() {
               ))}
             </div>
           </div>
-
+          <SliderNobutton
+            slides={promoSlides}
+            {...sliderConfig}
+          />
           {/* Regular Items Expandable Grid */}
           <div>
             <div className="flex items-center justify-between mb-6">
