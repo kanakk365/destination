@@ -20,8 +20,8 @@ export default function SportsTechnology() {
   const websiteUrls = [
     "https://battlelounge.io/", // Battle Lounge
     "https://ysn.tv/", // YSN
-    "https://battlelounge.io/", // Connected Athlete
-    "https://www.playerhub.io/", // Reels
+    "https://new.playerhub.io/", // Connected Athlete
+    "https://myreels.co/", // Reels
     "https://www.playerhub.io/", // PlayerHub
   ]
 

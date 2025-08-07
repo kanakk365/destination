@@ -5,11 +5,7 @@ export const promoSlides = [
     title: "State-of-the-Art Facilities",
     description: "Destination KP offers comprehensive facilities designed to support a wide range of sports and activities.",
   },
-  {
-    image: "https://i.postimg.cc/4d7Bq6JY/Lmnt-banner.jpg",
-    title: "Premier Sports Complex",
-    description: "Our mission is to provide facilities that inspire athletic excellence and promote healthy lifestyles.",
-  },
+  
 //   {
 //     image: "https://i.postimg.cc/D04qp97D/landingimage3.avif",
 //     title: "Community Hub",
@@ -22,6 +18,11 @@ export const todopromoSlides = [
     image: "https://i.postimg.cc/N0b45N09/nike.jpg",
     title: "State-of-the-Art Facilities",
     description: "Destination KP offers comprehensive facilities designed to support a wide range of sports and activities.",
+  },
+  {
+    image: "https://i.postimg.cc/4d7Bq6JY/Lmnt-banner.jpg",
+    title: "Premier Sports Complex",
+    description: "Our mission is to provide facilities that inspire athletic excellence and promote healthy lifestyles.",
   },
 //   {
 //     image: "https://i.postimg.cc/QCC68Yhk/landingimage2.avif",

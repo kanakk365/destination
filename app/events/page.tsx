@@ -17,6 +17,7 @@ import EventShareModal from "@/components/event-share-modal"
 import { AdsSection } from "@/components/ads-section"
 import { promoSlides,sliderConfig } from "@/data/slider-data"
 import { Slider } from "@/components/sliders"
+import { SliderNobutton } from '@/components/sliderNobutton';
 export default function EventsPage() {
   const [registrationForm, setRegistrationForm] = useState({
     isOpen: false,
@@ -409,7 +410,7 @@ export default function EventsPage() {
                           </Card>
                         </motion.div>
                         {index % 2 === 0 && index !== eventsData[month.id].length - 1 && (
-                            <Slider
+                            <SliderNobutton
                               slides={promoSlides}
                               {...sliderConfig}
                             />
