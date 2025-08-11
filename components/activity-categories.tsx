@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Filter, Star, MapPin, ChevronDown, ChevronUp
 import { Button } from "@/components/ui/button"
 import ActivityFilter from "./activity-filter"
 import { SliderNobutton } from "./sliderNobutton"
-import { promoSlides,sliderConfig } from "@/data/slider-data"
+import { promoSlidestodo,sliderConfig } from "@/data/slider-data"
 
 const categories = [
   {
@@ -725,7 +725,7 @@ export default function ActivityCategories() {
             </div>
           </div>
           <SliderNobutton
-            slides={promoSlides}
+            slides={promoSlidestodo}
             {...sliderConfig}
           />
           {/* Regular Items Expandable Grid */}
