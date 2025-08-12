@@ -68,7 +68,8 @@ export default function Facilities() {
       description:
         "Strategically placed throughout the complex, our vending machines offer convenient access to drinks, snacks, and essential items from local providers. These self-service stations ensure that refreshments are always available, even during the busiest events.",
       icon: <ShoppingCart className="h-6 w-6 text-blue-500" />,
-      src: "https://i.postimg.cc/ZKyG60zP/26294.jpg",
+      src: "/vending.jpg",
+      // https://i.postimg.cc/ZKyG60zP/26294.jpg
     },
     {
       category: "Food",
