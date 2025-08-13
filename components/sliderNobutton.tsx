@@ -19,6 +19,8 @@ interface SliderProps {
   showIndicators?: boolean // Optional prop with default value
   showNavigation?: boolean // Optional prop with default value
   height?: string // Optional prop with default value
+  fit?: "cover" | "contain" // Image fit mode
+  showOverlay?: boolean // Toggle gradient/text overlay
 }
 
 export function SliderNobutton({ 
@@ -26,7 +28,9 @@ export function SliderNobutton({
   autoPlayDelay = 5000,
   showIndicators = true,
   showNavigation = true,
-  height = "h-10 md:h-10 lg:h-10"
+  height = "h-10 md:h-10 lg:h-10",
+  fit = "cover",
+  showOverlay = true
 }: SliderProps) {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [autoplay, setAutoplay] = useState(true)
@@ -77,22 +81,24 @@ export function SliderNobutton({
             src={slides[currentSlide].image || "/placeholder.svg"}
             alt={slides[currentSlide].title}
             fill
-            className="object-cover"
+            className={fit === "contain" ? "object-contain" : "object-cover"}
             sizes="100vw"
             priority={currentSlide === 0}
           />
-          <div
-            className={`absolute inset-0 ${
-              isLightTheme 
-                ? "bg-gradient-to-t from-black/60 via-black/20 to-transparent" 
-                : "bg-gradient-to-t from-black/80 via-black/30 to-transparent"
-            }`}
-          >
-            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 max-w-7xl mx-auto">
-              {/* <h3 className="text-2xl md:text-4xl font-bold mb-2 text-white">{slides[currentSlide].title}</h3>
-              <p className="text-gray-200 text-lg md:text-xl max-w-3xl">{slides[currentSlide].description}</p> */}
+          {showOverlay && (
+            <div
+              className={`absolute inset-0 ${
+                isLightTheme 
+                  ? "bg-gradient-to-t from-black/60 via-black/20 to-transparent" 
+                  : "bg-gradient-to-t from-black/80 via-black/30 to-transparent"
+              }`}
+            >
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10 max-w-7xl mx-auto">
+                {/* <h3 className="text-2xl md:text-4xl font-bold mb-2 text-white">{slides[currentSlide].title}</h3>
+                <p className="text-gray-200 text-lg md:text-xl max-w-3xl">{slides[currentSlide].description}</p> */}
+              </div>
             </div>
-          </div>
+          )}
         </motion.div>
       </AnimatePresence>
 
