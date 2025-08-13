@@ -724,10 +724,7 @@ export default function ActivityCategories() {
               ))}
             </div>
           </div>
-          <SliderNobutton
-            slides={promoSlidestodo}
-            {...sliderConfig}
-          />
+          
           {/* Regular Items Expandable Grid */}
           <div>
             <div className="flex items-center justify-between mb-6">
@@ -738,29 +735,71 @@ export default function ActivityCategories() {
 
             {/* Grid with exactly 3 columns */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {getVisibleItems(selectedCategory).map((item) => (
-                <div
-                  key={item.id}
-                  onClick={() => window.open(item.url, "_blank", "noopener,noreferrer")}
-                  className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-blue-400/50 transition-all duration-300 group cursor-pointer"
-                >
-                  <img src={item.image || "/placeholder.svg"} alt={item.name} className="w-full h-48 object-cover" />
-                  <div className="p-4">
-                    <h4 className="text-lg font-semibold text-white mb-1">{item.name}</h4>
-                    <p className="text-blue-400 text-sm mb-2">{item.type}</p>
-                    <div className="flex items-center justify-between text-sm text-gray-300">
-                      <div className="flex items-center gap-1">
-                        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        <span>{item.rating}</span>
+              {(() => {
+                const items = getVisibleItems(selectedCategory)
+                if (selectedCategory === "restaurants") {
+                  const tiles = [] as any[]
+                  items.forEach((item, idx) => {
+                    tiles.push(
+                      <div
+                        key={item.id}
+                        onClick={() => window.open(item.url, "_blank", "noopener,noreferrer")}
+                        className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-blue-400/50 transition-all duration-300 group cursor-pointer"
+                      >
+                        <img src={item.image || "/placeholder.svg"} alt={item.name} className="w-full h-48 object-cover" />
+                        <div className="p-4">
+                          <h4 className="text-lg font-semibold text-white mb-1">{item.name}</h4>
+                          <p className="text-blue-400 text-sm mb-2">{item.type}</p>
+                          <div className="flex items-center justify-between text-sm text-gray-300">
+                            <div className="flex items-center gap-1">
+                              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                              <span>{item.rating}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <MapPin className="w-4 h-4" />
+                              <span>{item.distance}</span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        <span>{item.distance}</span>
+                    )
+                    if (idx === 1) {
+                      tiles.push(
+                        <div
+                          key="ad-slider"
+                          className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
+                        >
+                          <SliderNobutton slides={promoSlidestodo} {...sliderConfig} height="h-[200px] md:h-[220px]" showIndicators={false} />
+                        </div>
+                      )
+                    }
+                  })
+                  return tiles
+                }
+                return items.map((item) => (
+                  <div
+                    key={item.id}
+                    onClick={() => window.open(item.url, "_blank", "noopener,noreferrer")}
+                    className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-blue-400/50 transition-all duration-300 group cursor-pointer"
+                  >
+                    <img src={item.image || "/placeholder.svg"} alt={item.name} className="w-full h-48 object-cover" />
+                    <div className="p-4">
+                      <h4 className="text-lg font-semibold text-white mb-1">{item.name}</h4>
+                      <p className="text-blue-400 text-sm mb-2">{item.type}</p>
+                      <div className="flex items-center justify-between text-sm text-gray-300">
+                        <div className="flex items-center gap-1">
+                          <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                          <span>{item.rating}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <MapPin className="w-4 h-4" />
+                          <span>{item.distance}</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))
+              })()}
             </div>
 
             {/* Expand/Collapse Button */}

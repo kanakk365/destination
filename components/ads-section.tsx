@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
 export function AdsSection() {
   const handleLmntClick = () => {
-    window.open("https://drinklmnt.com/", "_blank", "noopener,noreferrer")
-  }
+    window.open("https://drinklmnt.com/", "_blank", "noopener,noreferrer");
+  };
 
   const handleNikeClick = () => {
-    window.open("https://www.nike.com/in/", "_blank", "noopener,noreferrer")
-  }
+    window.open("https://www.nike.com/in/", "_blank", "noopener,noreferrer");
+  };
 
   return (
     <div className="h-[490px] flex flex-col gap-4">
@@ -19,8 +19,8 @@ export function AdsSection() {
         tabIndex={0}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault()
-            handleLmntClick()
+            e.preventDefault();
+            handleLmntClick();
           }
         }}
         aria-label="Visit LMNT Electrolyte website"
@@ -41,8 +41,8 @@ export function AdsSection() {
         tabIndex={0}
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault()
-            handleNikeClick()
+            e.preventDefault();
+            handleNikeClick();
           }
         }}
         aria-label="Visit Nike India website"
@@ -55,5 +55,5 @@ export function AdsSection() {
         />
       </div>
     </div>
-  )
+  );
 }
