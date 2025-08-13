@@ -1,11 +1,13 @@
 "use client"
 
 import { useState } from "react"
+import type React from "react"
 import { ChevronLeft, ChevronRight, Filter, Star, MapPin, ChevronDown, ChevronUp } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ActivityFilter from "./activity-filter"
 import { SliderNobutton } from "./sliderNobutton"
 import { promoSlidestodo,sliderConfig } from "@/data/slider-data"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
 const categories = [
   {
@@ -733,50 +735,67 @@ export default function ActivityCategories() {
               </h3>
             </div>
 
-            {/* Grid with exactly 3 columns */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {(() => {
-                const items = getVisibleItems(selectedCategory)
-                if (selectedCategory === "restaurants") {
-                  const tiles = [] as any[]
-                  items.forEach((item, idx) => {
-                    tiles.push(
-                      <div
-                        key={item.id}
-                        onClick={() => window.open(item.url, "_blank", "noopener,noreferrer")}
-                        className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-blue-400/50 transition-all duration-300 group cursor-pointer"
-                      >
-                        <img src={item.image || "/placeholder.svg"} alt={item.name} className="w-full h-48 object-cover" />
-                        <div className="p-4">
-                          <h4 className="text-lg font-semibold text-white mb-1">{item.name}</h4>
-                          <p className="text-blue-400 text-sm mb-2">{item.type}</p>
-                          <div className="flex items-center justify-between text-sm text-gray-300">
-                            <div className="flex items-center gap-1">
-                              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                              <span>{item.rating}</span>
+            {/* Restaurants slider or static grid for other categories */}
+            {selectedCategory === "restaurants" ? (
+              <div className="relative">
+                <Carousel opts={{ align: "start" }} className="w-full">
+                  <CarouselContent>
+                    {categoryData[selectedCategory as keyof typeof categoryData].regular.flatMap((item, idx) => {
+                      const items: React.ReactNode[] = [
+                        (
+                          <CarouselItem key={item.id} className="basis-full md:basis-1/3">
+                            <div
+                              onClick={() => window.open(item.url, "_blank", "noopener,noreferrer")}
+                              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden hover:border-blue-400/50 transition-all duration-300 group cursor-pointer"
+                            >
+                              <img src={item.image || "/placeholder.svg"} alt={item.name} className="w-full h-48 object-cover" />
+                              <div className="p-4">
+                                <h4 className="text-lg font-semibold text-white mb-1">{item.name}</h4>
+                                <p className="text-blue-400 text-sm mb-2">{item.type}</p>
+                                <div className="flex items-center justify-between text-sm text-gray-300">
+                                  <div className="flex items-center gap-1">
+                                    <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                                    <span>{item.rating}</span>
+                                  </div>
+                                  <div className="flex items-center gap-1">
+                                    <MapPin className="w-4 h-4" />
+                                    <span>{item.distance}</span>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <div className="flex items-center gap-1">
-                              <MapPin className="w-4 h-4" />
-                              <span>{item.distance}</span>
+                          </CarouselItem>
+                        ),
+                      ]
+                      if (idx === 0) {
+                        items.push(
+                          <CarouselItem key="ad-slider" className="basis-full md:basis-1/3">
+                            <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden">
+                              <div className="relative">
+                                <SliderNobutton
+                                  slides={promoSlidestodo}
+                                  {...sliderConfig}
+                                  height="h-[14.3rem]"
+                                  showIndicators={false}
+                                />
+                              </div>
+                              <div className="p-4">
+                                <div className="text-sm text-gray-300">Advertisement</div>
+                              </div>
                             </div>
-                          </div>
-                        </div>
-                      </div>
-                    )
-                    if (idx === 1) {
-                      tiles.push(
-                        <div
-                          key="ad-slider"
-                          className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden"
-                        >
-                          <SliderNobutton slides={promoSlidestodo} {...sliderConfig} height="h-[200px] md:h-[220px]" showIndicators={false} />
-                        </div>
-                      )
-                    }
-                  })
-                  return tiles
-                }
-                return items.map((item) => (
+                          </CarouselItem>
+                        )
+                      }
+                      return items
+                    })}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {getVisibleItems(selectedCategory).map((item) => (
                   <div
                     key={item.id}
                     onClick={() => window.open(item.url, "_blank", "noopener,noreferrer")}
@@ -798,12 +817,12 @@ export default function ActivityCategories() {
                       </div>
                     </div>
                   </div>
-                ))
-              })()}
-            </div>
+                ))}
+              </div>
+            )}
 
-            {/* Expand/Collapse Button */}
-            {hasMoreItems(selectedCategory) && (
+            {/* Expand/Collapse Button (hidden for restaurants) */}
+            {selectedCategory !== "restaurants" && hasMoreItems(selectedCategory) && (
               <div className="flex justify-center mt-8">
                 <Button
                   onClick={() => toggleExpanded(selectedCategory)}
