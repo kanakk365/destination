@@ -47,7 +47,7 @@ export default function SportsTechnology() {
           title: "In-Person & Online Tournaments",
           description:
             "Host and participate in real-time esports events from anywhere. Our platform seamlessly connects players whether they're competing from our facility or remotely.",
-          image: "/images/battle-lounge-homepage.jpeg",
+          image: "/images/bl.png",
         },
         {
           title: "Tournament Management System",
