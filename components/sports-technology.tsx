@@ -53,13 +53,13 @@ export default function SportsTechnology() {
           title: "Tournament Management System",
           description:
             "Complete tournament lifecycle management with registration, brackets, player tracking, and real-time updates. Professional tournament organization made simple.",
-          image: "/images/battle-lounge-tournament.jpeg",
+          image: "/images/bl2.png",
         },
         {
           title: "Personal Gaming Dashboard",
           description:
             "Track your tournament history, upcoming events, and gaming achievements. Comprehensive player profiles with statistics and performance analytics.",
-          image: "/images/battle-lounge-dashboard.jpeg",
+          image: "/images/bl3.png",
         },
       ],
     },
