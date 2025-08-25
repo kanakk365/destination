@@ -12,7 +12,8 @@ export default function SportsTechnology() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
   const [activeTab, setActiveTab] = useState(0)
-  const [hoveredPoint, setHoveredPoint] = useState<number | null>(null)
+  // Track the currently "active" point (last hovered). Initialize to 0 so first point shows by default.
+  const [hoveredPoint, setHoveredPoint] = useState<number>(0)
   const { theme } = useTheme()
   const isLightTheme = theme === "light"
 
@@ -172,19 +173,9 @@ export default function SportsTechnology() {
     },
   ]
 
-  const getCurrentImage = () => {
-    if (hoveredPoint !== null) {
-      return technologyItems[activeTab].points[hoveredPoint].image
-    }
-    return technologyItems[activeTab].points[0].image // Default to first point's image
-  }
+  const getCurrentImage = () => technologyItems[activeTab].points[hoveredPoint].image
 
-  const getCurrentPointInfo = () => {
-    if (hoveredPoint !== null) {
-      return technologyItems[activeTab].points[hoveredPoint]
-    }
-    return technologyItems[activeTab].points[0] // Default to first point
-  }
+  const getCurrentPointInfo = () => technologyItems[activeTab].points[hoveredPoint]
 
   return (
     <section
@@ -221,7 +212,7 @@ export default function SportsTechnology() {
               key={index}
               onClick={() => {
                 setActiveTab(index)
-                setHoveredPoint(null) // Reset hovered point when switching tabs
+                setHoveredPoint(0) // Reset to first point when switching tabs
               }}
               className={cn(
                 "flex items-center gap-3 px-6 py-3 rounded-xl font-semibold transition-all duration-500 border-2",
@@ -287,7 +278,7 @@ export default function SportsTechnology() {
                         : "bg-gray-900/30 border-gray-800 hover:border-gray-700 hover:bg-gray-800/50",
                     )}
                     onMouseEnter={() => setHoveredPoint(index)}
-                    onMouseLeave={() => setHoveredPoint(null)}
+                    // Intentionally keep last hovered image; no onMouseLeave reset
                   >
                     <h4 className={`font-semibold mb-2 ${isLightTheme ? "text-gray-900" : "text-white"}`}>
                       <a
