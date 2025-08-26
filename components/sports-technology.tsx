@@ -81,13 +81,13 @@ export default function SportsTechnology() {
           title: "Interactive Viewing Experience",
           description:
             "Engage with live chat, view multiple camera angles, and access upcoming match schedules. Real-time community interaction enhances the viewing experience.",
-          image: "/images/ysn-live-interface.jpeg",
+          image: "/images/ysn2.png",
         },
         {
           title: "Team Management Platform",
           description:
             "Comprehensive team administration with player rosters, match history, statistics tracking, and organizational tools for coaches and team managers.",
-          image: "/images/ysn-team-dashboard.jpeg",
+          image: "/images/ysn3.png",
         },
       ],
     },
@@ -108,7 +108,7 @@ export default function SportsTechnology() {
           title: "Injury Risk Detection",
           description:
             "Spots inefficiencies and flags physical issues before they become injuries. Proactive identification of potential problems through movement pattern analysis.",
-          image: "/images/connected-athlete-dashboard.png",
+          image: "/images/ca2.png",
         },
         {
           title: "Integrated Recovery Loop",
